@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="سان‌راد — جواهر و طلای دست‌ساز با کیفیت و اعتماد" />
+    <title>سان‌راد | Sunrad — فروشگاه آنلاین طلا و جواهر</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="top-gold-bar" dir="rtl">
+      <span class="gold-label">قیمت لحظه‌ای طلای ۱۸ عیار:</span>
+      <strong id="live-gold-price" class="gold-price">-</strong>
+    </div>
+
+    <div class="masthead">
+      <header class="brand-header" dir="rtl">
+        <div class="brand-header__start">
+          <div class="brand-logo" aria-hidden="true">SR</div>
+          <div class="brand-meta">
+            <h1 class="brand-name">سان‌راد</h1>
+            <p class="brand-tagline">Sunrad · طلا و جواهر</p>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-inner" dir="rtl">
+        <div>
+          <p class="hero-kicker">گالری سان‌راد</p>
+          <h2 id="hero-heading">زیبایی خالص، اعتماد پایدار</h2>
+          <p class="hero-lead">
+            مجموعه‌ای منتخب از طلا و جواهر با طراحی ظریف؛ مشاوره تخصصی برای انتخبی
+            ماندگار.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#catalog">مشاهده مجموعه</a>
+            <a class="btn btn-outline-light" href="contact.html">مشاوره خرید</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-frame">
+            <div class="hero-frame-inner">✦</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <div id="catalog" class="catalog-head" dir="rtl">
+      <h2>محصولات</h2>
+      <p>انتخاب دسته و مشاهده جزئیات هر قطعه</p>
+      <div class="gold-rule" aria-hidden="true"></div>
+    </div>
+
+    <main class="container">
+      <div class="shop-layout">
+        <section class="mobile-category-menu" aria-label="منوی دسته‌بندی موبایل" dir="rtl">
+          <button
+            id="mobile-category-toggle"
+            class="mobile-category-hamburger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-category-panel"
+            aria-label="باز کردن منوی دسته‌بندی"
+          >
+            <span class="hamburger-icon" aria-hidden="true">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </span>
+          </button>
+          <div id="mobile-category-panel" class="mobile-category-panel" hidden>
+            <nav id="mobile-category-list" class="category-list"></nav>
+          </div>
+        </section>
+        <section id="products" class="product-grid" aria-label="لیست محصولات"></section>
+        <aside class="category-sidebar" aria-label="دسته‌بندی‌ها">
+          <h2 class="category-title">دسته‌بندی</h2>
+          <nav id="category-list" class="category-list"></nav>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer" dir="rtl">
+      <div class="footer-grid">
+        <section class="footer-section">
+          <h3>نقشه سایت</h3>
+          <a href="index.html">صفحه اصلی</a>
+          <a href="contact.html">تماس با ما</a>
+        </section>
+        <section class="footer-section">
+          <h3>اطلاعات تماس</h3>
+          <p>ساعت کاری: شنبه تا پنج‌شنبه، ۹ تا ۲۰</p>
+          <p>آدرس: تهران، خیابان ولیعصر، پلاک ۱۲۳</p>
+          <p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+          <p>موبایل: ۰۹۱۲-۱۲۳-۴۵۶۷</p>
+          <p>ایمیل: info@sanrad.ir</p>
+        </section>
+      </div>
+      <small class="footer-copy">&copy; سان‌راد Sunrad</small>
+    </footer>
+
+    <script src="products-data.js"></script>
+    <script src="shop-loader.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
