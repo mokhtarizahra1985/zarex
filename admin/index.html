@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پنل مدیریت | سان‌راد</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body class="admin-body">
+    <div class="admin-shell" dir="rtl">
+      <header class="admin-top">
+        <div>
+          <h1 class="admin-title">پنل مدیریت محصولات</h1>
+          <p id="admin-user" class="admin-message"></p>
+        </div>
+        <div class="admin-actions">
+          <a class="btn-admin btn-admin-secondary" href="../index.html">مشاهده سایت</a>
+          <button id="logout-btn" class="btn-admin btn-admin-secondary" type="button">خروج</button>
+        </div>
+      </header>
+
+      <p id="panel-message" class="admin-message" hidden></p>
+
+      <section class="admin-card">
+        <h2>قیمت لحظه‌ای طلا (تومان برای هر گرم ۱۸ عیار)</h2>
+        <form id="gold-form" class="admin-form admin-grid two-col">
+          <div>
+            <label for="liveGoldPriceToman">قیمت هر گرم</label>
+            <input id="liveGoldPriceToman" name="liveGoldPriceToman" type="number" min="1" step="1" required />
+          </div>
+          <div class="admin-actions" style="align-items: end">
+            <button class="btn-admin btn-admin-primary" type="submit">ذخیره قیمت طلا</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="admin-card">
+        <h2 id="product-form-title">افزودن محصول جدید</h2>
+        <form id="product-form" class="admin-form">
+          <input type="hidden" id="product-id" name="id" />
+          <div class="admin-grid two-col">
+            <div>
+              <label for="name">عنوان محصول</label>
+              <input id="name" name="name" required />
+            </div>
+            <div>
+              <label for="category">دسته‌بندی</label>
+              <select id="category" name="category" required></select>
+            </div>
+          </div>
+          <label for="description">توضیح کوتاه</label>
+          <textarea id="description" name="description" required></textarea>
+          <label for="details">توضیحات کامل (صفحه جزئیات)</label>
+          <textarea id="details" name="details"></textarea>
+          <div class="admin-grid two-col">
+            <div>
+              <label for="weightGrams">وزن (گرم)</label>
+              <input id="weightGrams" name="weightGrams" type="number" min="0.001" step="0.001" required />
+            </div>
+            <div>
+              <label for="feePercent">کارمزد (درصد)</label>
+              <input id="feePercent" name="feePercent" type="number" min="0" step="0.1" required />
+            </div>
+          </div>
+
+          <label>تصاویر محصول</label>
+          <div id="image-preview-list" class="image-preview-list"></div>
+          <input id="image-upload" type="file" accept="image/*" multiple />
+          <p class="admin-message">پس از انتخاب، تصاویر آپلود می‌شوند و به محصول اضافه می‌گردند.</p>
+
+          <div class="admin-actions">
+            <button class="btn-admin btn-admin-primary" type="submit">ذخیره محصول</button>
+            <button id="cancel-edit-btn" class="btn-admin btn-admin-secondary hidden" type="button">انصراف از ویرایش</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="admin-card">
+        <h2>لیست محصولات</h2>
+        <div style="overflow-x: auto">
+          <table class="product-table">
+            <thead>
+              <tr>
+                <th>تصویر</th>
+                <th>عنوان</th>
+                <th>دسته</th>
+                <th>وزن</th>
+                <th>کارمزد</th>
+                <th>عملیات</th>
+              </tr>
+            </thead>
+            <tbody id="products-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+    <script src="admin.js"></script>
+  </body>
+</html>

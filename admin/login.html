@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ورود پنل مدیریت | سان‌راد</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body class="admin-body">
+    <div class="admin-login-wrap" dir="rtl">
+      <section class="admin-card admin-login-card">
+        <h1 class="admin-title">پنل مدیریت سان‌راد</h1>
+        <p id="login-message" class="admin-message" hidden></p>
+        <form id="login-form" class="admin-form">
+          <label for="username">نام کاربری</label>
+          <input id="username" name="username" type="text" autocomplete="username" required />
+
+          <label for="password">رمز عبور</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required />
+
+          <button class="btn-admin btn-admin-primary" type="submit">ورود</button>
+        </form>
+        <p style="margin-top: 1rem">
+          <a href="../index.html">بازگشت به سایت</a>
+        </p>
+      </section>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
